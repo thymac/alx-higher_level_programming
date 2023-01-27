@@ -32,7 +32,6 @@ class Node():
         else:
             raise TypeError("data must be an integer")
 
-
     @property
     def next_node(self):
         """Get or set the next node of the current node."""
