@@ -8,7 +8,7 @@ GRANT ALL PRIVILEGES
 	IDENTIFIED BY 'user_0d_1_pwd';
        	WITH GRANT OPTION;
 CREATE USER
-	'user_0d_1'@'%' 
+	IF NOT EXISTS 'user_0d_1'@'%' 
 	IDENTIFIED BY 'user_0d_1_pwd';
 GRANT ALL PRIVILEGES
 	ON *.*
