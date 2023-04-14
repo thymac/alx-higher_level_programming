@@ -12,7 +12,7 @@ function incr () {
 
 myObject.incr = incr;
 
-myObject.incr.toString = function() {
+myObject.incr.toString = function () {
   return '[Function]';
 };
 
