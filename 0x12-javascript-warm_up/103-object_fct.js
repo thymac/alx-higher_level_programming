@@ -12,6 +12,10 @@ function incr () {
 
 myObject.incr = incr;
 
+myObject.incr.toString = function() {
+  return '[Function]';
+};
+
 myObject.incr();
 console.log(myObject);
 myObject.incr();
