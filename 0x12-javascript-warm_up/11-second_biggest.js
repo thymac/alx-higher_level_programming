@@ -2,7 +2,7 @@
 
 const args = process.argv.slice(2);
 
-args.sort(function(a, b) {
+args.sort(function (a, b) {
   return b - a;
 });
 

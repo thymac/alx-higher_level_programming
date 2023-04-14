@@ -6,5 +6,5 @@ const [num0, num1] = [parseInt(arg0), parseInt(arg1)];
 if (!Number.isNaN(num0) && !Number.isNaN(num1)) {
   console.log(num0 + num1);
 } else {
-  console.log("NaN");
+  console.log('NaN');
 }

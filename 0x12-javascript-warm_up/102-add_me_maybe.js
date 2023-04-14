@@ -1,7 +1,7 @@
 #!usr/bin/node
 
-function addMeMaybe(number, theFunction) {
-  let nb = parseInt(number) + 1;
+function addMeMaybe (number, theFunction) {
+  const nb = parseInt(number) + 1;
   return theFunction(nb);
 }
 
