@@ -1,4 +1,4 @@
-#!usr/bin/node
+#!/usr/bin/node
 
 function addMeMaybe (number, theFunction) {
   const nb = parseInt(number) + 1;
