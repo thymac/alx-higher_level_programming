@@ -11,5 +11,4 @@ for (const key in dict) {
   }
 }
 
-console.log(dict);
 console.log(newDict);

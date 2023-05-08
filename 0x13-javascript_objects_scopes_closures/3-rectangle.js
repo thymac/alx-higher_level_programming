@@ -13,7 +13,7 @@ module.exports = class Rectangle {
       for (let i = 0; i < this.width; i++) {
         row += 'X';
       }
-    console.log(row);
+      console.log(row);
     }
   }
 };
