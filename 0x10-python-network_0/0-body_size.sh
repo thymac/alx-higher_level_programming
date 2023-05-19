@@ -1,6 +1,5 @@
 #!/bin/bash
-# A script that takes a URL as an argument, sends a GET request to that URL, and displays the response body
-
+# send a request to an URL with curl and displays the size of the body of the response
 URL="$1"
-curl -sI "$URL" | grep -i Content-Length | awk '{print $2}'
+curl -s -w '%{size_download}' -o /dev/null "$URL"
 
