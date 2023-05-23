@@ -7,13 +7,11 @@ You must use the module request
 */
 
 const request = require('request');
-
+const process = require('process');
 const url = process.argv[2];
 
-request.get(url, (err, response) => {
-  if (err) {
-    console.error(err);
-  } else {
+request.get(url, function (err, response) => {
+  if (err == null) {
     console.log(`code: ${response.statusCode}`);
   }
 });
