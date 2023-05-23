@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 /*
 A script that prints the title of a Star Wars movie where the episode number matches a given integer.
 The first argument is the movie ID

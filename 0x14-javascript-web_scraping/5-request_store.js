@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 /*
 A script that gets the contents of a webpage and stores it in a file.
 The first argument is the URL to request
