@@ -8,18 +8,16 @@ You must use the module request
 
 const request = require('request');
 
-const apiUrl = process.argv[2];
-const characterId = 18;
+const URL = process.argv[2];
 
-request.get(apiUrl, (err, response, body) => {
-  if (err) {
-    console.error(err);
-  } else {
-    const films = JSON.parse(body).results;
-    const count = films.filter((film) =>
-      film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)
-    ).length;
-    console.log(count);
+request(URL, (error, response, body) => {
+  if (error) {
+    console.log(error);
+  } else if (body) {
+    const json = JSON.parse(body);
+    const charFilms = json.results.filter(
+      x => x.characters.find(y => y.match(/\/people\/18\/?$/))
+    );
+    console.log(charFilms.length);
   }
 });
-

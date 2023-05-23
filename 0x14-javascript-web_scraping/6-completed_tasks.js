@@ -8,26 +8,20 @@ You must use the module request
 
 const request = require('request');
 
-const apiUrl = process.argv[2];
-
-request.get(apiUrl, (err, response, body) => {
-  if (err) {
-    console.error(err);
-  } else {
-    const todos = JSON.parse(body);
-    const completedTasks = {};
-
-    todos.forEach((todo) => {
-      if (todo.completed) {
-        if (completedTasks[todo.userId]) {
-          completedTasks[todo.userId]++;
-        } else {
-          completedTasks[todo.userId] = 1;
-        }
-      }
-    });
-
-    console.log(completedTasks);
+const baseURL = process.argv[2];
+request(baseURL, (error, response, body) => {
+  const aggregate = {};
+  if (error) {
+    console.log(error);
   }
+  const json = JSON.parse(body);
+  json.forEach(element => {
+    if (element.completed) {
+      if (!aggregate[element.userId]) {
+        aggregate[element.userId] = 0;
+      }
+      aggregate[element.userId]++;
+    }
+  });
+  console.log(aggregate);
 });
-
