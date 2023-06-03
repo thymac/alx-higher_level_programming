@@ -2,6 +2,8 @@
 """
 A function that finds a peak in a list of unsorted integers.
 """
+
+
 def find_peak(list_of_integers):
     """
     Find a peak in a list of unsorted integers.
@@ -15,7 +17,8 @@ def find_peak(list_of_integers):
     while low < high:
         mid = (low + high) // 2
 
-        if list_of_integers[mid] > list_of_integers[mid - 1] and list_of_integers[mid] > list_of_integers[mid + 1]:
+        if list_of_integers[mid] > list_of_integers[mid - 1]
+        and list_of_integers[mid] > list_of_integers[mid + 1]:
             return list_of_integers[mid]
         elif list_of_integers[mid] < list_of_integers[mid + 1]:
             low = mid + 1
@@ -23,4 +26,3 @@ def find_peak(list_of_integers):
             high = mid - 1
 
     return list_of_integers[low]
-
